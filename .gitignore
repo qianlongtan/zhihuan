@@ -1,0 +1,10 @@
+.venv/
+.venv-win/
+build/
+dist/
+node_modules/
+data/
+__pycache__/
+*.pyc
+*.tmp
+package-lock.json

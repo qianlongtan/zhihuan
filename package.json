@@ -1,0 +1,11 @@
+{
+  "name": "zhihuan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PDF 划词翻译 / 标注 —— 运行时不需要 node_modules，前端依赖已内置在 static/vendor/",
+  "type": "commonjs",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38"
+  }
+}
