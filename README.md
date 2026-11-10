@@ -2,18 +2,21 @@
 
 左边读 PDF，鼠标选中就翻译，右边出译文。可同时接入多家翻译服务，密钥只存在本机。
 
+> **完全免费，下载即用。** 内置 **B站 Index-Translate** 公共翻译接口——不用注册、不用申请 API Key、不花一分钱，装好打开就能翻译。想换更强的模型时，再填自己的密钥。
+
 ![界面](docs/screenshot.png)
 
 ## 快速开始
 
 ```bash
+git clone https://github.com/qianlongtan/zhihuan.git
 cd zhihuan
 ./start.sh          # 首次运行会自动建虚拟环境并装依赖
 ```
 
 浏览器会自动打开 `http://127.0.0.1:8765`。拖入一个 PDF 即可。
 
-首次打开默认使用「讯飞星火 HTTP (Lite)」。其余服务商（小牛、火山）的密钥已预填，顶栏可随时切换；想换成自己的账号就进设置重新填。
+首次打开默认就是 **B站 Index-Translate**：完全免费、无需任何密钥，选一个 PDF 就能开始划词翻译。想换智谱、火山、小牛、百度等服务商，进右上角「设置」填自己的密钥即可，顶栏随时切换。
 
 ## Windows 上运行
 
@@ -42,9 +45,9 @@ start.bat --build
 
 | 服务 | 需要 | 说明 |
 |---|---|---|
+| **B站 Index-Translate** | **无需密钥** | **完全免费、无需注册，下载即用**；2B/9B/35B 三档可选，约 0.6–2s |
 | 硅基流动 SiliconFlow | API Key | 聚合平台，混元 MT 翻译模型约 0.6s；Qwen 系有免费额度 |
 | 书生端砚 | API Key | `discovery-api.intern-ai.org.cn`，Sage-A1.5 翻译模型，约 0.9s |
-| B站 Index-Translate | 无需密钥 | 哔哩哔哩开源翻译模型公共 API，完全免费；2B/9B/35B 三档可选 |
 | 智谱 GLM | API Key | OpenAI 兼容，`glm-4-flash` 有免费额度 |
 | 讯飞星辰 MaaS | APIKey | OpenAI 兼容，模型 ID 见控制台模型广场 |
 | 小牛翻译 | API Key（可选 AppId） | 有 AppId 走新版 v2 签名接口，否则走旧版 |
