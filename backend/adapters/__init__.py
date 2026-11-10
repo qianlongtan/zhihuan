@@ -7,6 +7,7 @@ from .index_translate import IndexTranslateAdapter
 from .mock import MockAdapter
 from .niutrans import NiuTransAdapter
 from .openai_compat import OpenAICompatAdapter
+from .siliconflow import SiliconFlowAdapter
 from .spark import SparkAdapter
 from .volc import VolcAdapter
 
@@ -51,6 +52,7 @@ class SparkHttpAdapter(OpenAICompatAdapter):
 REGISTRY: dict[str, type[BaseAdapter]] = {
     "mock": MockAdapter,
     "index_translate": IndexTranslateAdapter,
+    "siliconflow": SiliconFlowAdapter,
     "zhipu": ZhipuAdapter,
     "xfyun_maas": XfyunMaasAdapter,
     "openai": GenericOpenAIAdapter,
@@ -64,6 +66,7 @@ REGISTRY: dict[str, type[BaseAdapter]] = {
 NAMES = {
     "mock": "离线示例",
     "index_translate": "B站 Index-Translate",
+    "siliconflow": "硅基流动",
     "zhipu": "智谱 GLM",
     "xfyun_maas": "讯飞星辰 MaaS",
     "openai": "自定义 OpenAI 兼容",

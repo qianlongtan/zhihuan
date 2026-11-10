@@ -71,6 +71,28 @@ PROVIDERS: list[dict[str, Any]] = [
                      "base_url": "https://index-translate.bilibili.com/v1"},
     },
     {
+        "id": "siliconflow",
+        "name": "硅基流动 SiliconFlow",
+        "tag": "OpenAI 兼容",
+        "desc": "聚合平台，混元翻译模型 0.6s 出结果；Qwen 系免费额度多，适合日常阅读。",
+        "docs": "https://cloud.siliconflow.cn/account/ak",
+        "fields": [
+            {"key": "api_key", "label": "API Key", "type": "password", "required": True,
+             "placeholder": "sk-..."},
+            {"key": "model", "label": "模型", "type": "select", "default": "tencent/Hunyuan-MT-7B",
+             "options": [
+                 {"value": "tencent/Hunyuan-MT-7B", "label": "Hunyuan-MT-7B · 翻译专用（推荐）"},
+                 {"value": "Qwen/Qwen2.5-7B-Instruct", "label": "Qwen2.5-7B-Instruct · 免费 / 通用"},
+                 {"value": "Qwen/Qwen3-8B", "label": "Qwen3-8B · 通用，首字较慢"},
+             ],
+             "help": "翻译选混元 MT；通用模型偶尔会把 transformer 译成「变压器」。"},
+            {"key": "base_url", "label": "Base URL", "type": "text",
+             "default": "https://api.siliconflow.cn/v1", "advanced": True},
+        ],
+        "defaults": {"model": "tencent/Hunyuan-MT-7B",
+                     "base_url": "https://api.siliconflow.cn/v1"},
+    },
+    {
         "id": "zhipu",
         "name": "智谱 GLM",
         "tag": "OpenAI 兼容",
