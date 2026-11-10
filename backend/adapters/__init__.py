@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from .base import BaseAdapter, ProviderError
 from .baidu import BaiduAdapter
+from .duanyan import DuanyanAdapter
 from .index_translate import IndexTranslateAdapter
 from .mock import MockAdapter
 from .niutrans import NiuTransAdapter
@@ -53,6 +54,7 @@ REGISTRY: dict[str, type[BaseAdapter]] = {
     "mock": MockAdapter,
     "index_translate": IndexTranslateAdapter,
     "siliconflow": SiliconFlowAdapter,
+    "duanyan": DuanyanAdapter,
     "zhipu": ZhipuAdapter,
     "xfyun_maas": XfyunMaasAdapter,
     "openai": GenericOpenAIAdapter,
@@ -67,6 +69,7 @@ NAMES = {
     "mock": "离线示例",
     "index_translate": "B站 Index-Translate",
     "siliconflow": "硅基流动",
+    "duanyan": "书生端砚",
     "zhipu": "智谱 GLM",
     "xfyun_maas": "讯飞星辰 MaaS",
     "openai": "自定义 OpenAI 兼容",

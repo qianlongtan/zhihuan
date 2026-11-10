@@ -43,6 +43,7 @@ start.bat --build
 | 服务 | 需要 | 说明 |
 |---|---|---|
 | 硅基流动 SiliconFlow | API Key | 聚合平台，混元 MT 翻译模型约 0.6s；Qwen 系有免费额度 |
+| 书生端砚 | API Key | `discovery-api.intern-ai.org.cn`，Sage-A1.5 翻译模型，约 0.9s |
 | B站 Index-Translate | 无需密钥 | 哔哩哔哩开源翻译模型公共 API，完全免费；2B/9B/35B 三档可选 |
 | 智谱 GLM | API Key | OpenAI 兼容，`glm-4-flash` 有免费额度 |
 | 讯飞星辰 MaaS | APIKey | OpenAI 兼容，模型 ID 见控制台模型广场 |
